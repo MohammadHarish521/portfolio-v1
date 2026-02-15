@@ -5,7 +5,7 @@ export interface Project {
   bgimage: string;
   bgDarkImage: string;
   LinkGit: string;
-  category: "uiux" | "fullstack" | "freelance" | "general";
+  category: "uiux" | "fullstack" | "freelance" | "general" | "agency";
   Technologies?: string[];
 }
 
@@ -18,7 +18,7 @@ export const projectsData: Project[] = [
     bgimage: "/assets/ghost.png",
     bgDarkImage: "/assets/ghost.png",
     LinkGit: "https://www.shadowrites.in/",
-    category: "freelance",
+    category: "agency",
     Technologies: ["Nextjs", "Tailwind"],
   },
   {
@@ -28,7 +28,7 @@ export const projectsData: Project[] = [
     bgimage: "/assets/agency.png",
     bgDarkImage: "/assets/agency.png",
     LinkGit: "https://www.infinitestudiox.art/",
-    category: "freelance",
+    category: "agency",
     Technologies: ["Nextjs", "Tailwind"],
   },
   {

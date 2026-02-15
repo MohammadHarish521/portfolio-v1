@@ -12,6 +12,7 @@ export default function ProjectsPage() {
   const freelanceProjects = projectsData.filter(
     (p) => p.category === "freelance"
   );
+  const agencyProjects = projectsData.filter((p) => p.category === "agency");
   const generalProjects = projectsData.filter((p) => p.category === "general");
 
   return (
@@ -49,6 +50,22 @@ export default function ProjectsPage() {
           </div>
         </div>
 
+
+        {/* Agency Section */}
+        {agencyProjects.length > 0 && (
+          <section className="mb-32">
+            <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
+              <span className="w-8 h-[1px] bg-pink-500"></span>
+              Agency Projects
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
+              {agencyProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} />
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* UI/UX Section */}
         {uiuxProjects.length > 0 && (
           <section className="mb-32">
@@ -58,7 +75,11 @@ export default function ProjectsPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
               {uiuxProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={index + agencyProjects.length}
+                />
               ))}
             </div>
           </section>
@@ -73,7 +94,11 @@ export default function ProjectsPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
               {fullstackProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index + uiuxProjects.length} />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={index + agencyProjects.length + uiuxProjects.length}
+                />
               ))}
             </div>
           </section>
@@ -88,7 +113,16 @@ export default function ProjectsPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
               {freelanceProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index + uiuxProjects.length + fullstackProjects.length} />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={
+                    index +
+                    agencyProjects.length +
+                    uiuxProjects.length +
+                    fullstackProjects.length
+                  }
+                />
               ))}
             </div>
           </section>
@@ -108,6 +142,7 @@ export default function ProjectsPage() {
                   project={project}
                   index={
                     index +
+                    agencyProjects.length +
                     uiuxProjects.length +
                     fullstackProjects.length +
                     freelanceProjects.length
