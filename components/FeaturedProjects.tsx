@@ -4,14 +4,12 @@ import Link from "next/link";
 import ProjectCard from "./ProjectCard";
 
 export default function FeaturedProjects() {
-  const fullStackProjects = projectsData.filter(
-    (project) => project.category === "fullstack"
-  );
-  const uiUxProjects = projectsData
-    .filter((project) => project.category === "uiux")
-    .slice(0, 2);
-
-  const featuredProjects = [...fullStackProjects, ...uiUxProjects];
+  const featuredProjects = [
+    projectsData.find((p) => p.Name === "Roastume"),
+    projectsData.find((p) => p.Name === "Pixel Brain IQ"),
+    projectsData.find((p) => p.Name === "Jose Lead"),
+    projectsData.find((p) => p.Name === "Salfiya"),
+  ].filter((p) => p !== undefined) as typeof projectsData;
 
   return (
     <section id="projects" className="mt-32 lg:pl-12 relative">

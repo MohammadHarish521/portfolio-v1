@@ -12,6 +12,36 @@ export interface Project {
 export const projectsData: Project[] = [
    // UI/UX Projects
   {
+    id: 26,
+    Name: "ShadowRites",
+    Description: "Ghostwriting and personal branding agency",
+    bgimage: "/assets/ghost.png",
+    bgDarkImage: "/assets/ghost.png",
+    LinkGit: "https://www.shadowrites.in/",
+    category: "freelance",
+    Technologies: ["Nextjs", "Tailwind"],
+  },
+  {
+    id: 25,
+    Name: "InfiniteStudioX",
+    Description: "Premium design and development agency",
+    bgimage: "/assets/agency.png",
+    bgDarkImage: "/assets/agency.png",
+    LinkGit: "https://www.infinitestudiox.art/",
+    category: "freelance",
+    Technologies: ["Nextjs", "Tailwind"],
+  },
+  {
+    id: 24,
+    Name: "Jose Lead",
+    Description: "This was supposed to be a 1500$ landing page but the client ghosted us after the first payment",
+    bgimage: "/assets/joshlead.png",
+    bgDarkImage: "/assets/joshlead.png",
+    LinkGit: "https://josh2-psi.vercel.app",
+    category: "freelance",
+    Technologies: ["Nextjs", "Tailwind"],
+  },
+  {
     id: 23,
     Name: "Digital Landscape Report",
     Description: "Data-driven report landing page with interactive analytics",
@@ -24,7 +54,7 @@ export const projectsData: Project[] = [
   {
     id: 22,
     Name: "CryptoVault",
-    Description: "DeFi trading platform with AI-assisted trading interface",
+    Description: "Cryptovault design",
     bgimage: "/assets/cryptovault.png",
     bgDarkImage: "/assets/cryptovault.png",
     LinkGit: "https://cryptovaultd6.vercel.app/",
@@ -33,8 +63,8 @@ export const projectsData: Project[] = [
   },
   {
     id: 21,
-    Name: "Design Collection",
-    Description: "Minimal design gallery showcasing digital identities",
+    Name: "Digital Studio",
+    Description: "Design mockup for a digital studio",
     bgimage: "/assets/design1.png",
     bgDarkImage: "/assets/design1.png",
     LinkGit: "https://craftdigid2.vercel.app/",
@@ -44,22 +74,22 @@ export const projectsData: Project[] = [
   {
     id: 1,
     Name: "Sparky",
-    Description: "Gamefied Edtech platform Design",
+    Description: "Design mockup for Student learning platform",
     bgimage: "/assets/sparky.png",
     bgDarkImage: "/assets/sparky.png",
     LinkGit: "https://saprky-1v.vercel.app/",
     category: "uiux",
-    Technologies: ["Nextjs", "Tailwind",],
+    Technologies: ["Nextjs", "Tailwind"],
 
   },{
     id: 2,
     Name: "Digilab",
-    Description: "The operating system for planetary preservation.",
+    Description: "Design for a speaker mockup",
     bgimage: "/assets/digilab.png",
     bgDarkImage: "/assets/digilab.png",
     LinkGit: "https://osplannetx.vercel.app/",
     category: "uiux",
-    Technologies: ["Nextjs", "Tailwind",],
+    Technologies: ["Nextjs", "Tailwind"],
   },
  
   {
@@ -107,7 +137,7 @@ export const projectsData: Project[] = [
   {
     id: 10,
     Name: "Roastume",
-    Description: "Resume roaster and feedback tool",
+    Description: "Platform for users to post their resumes and get roasted",
     bgimage: "/assets/raostume.png",
     bgDarkImage: "/assets/raostume.png",
     LinkGit: "https://roastume.fun",

@@ -51,6 +51,14 @@ export default function Hero() {
                 className="hover:text-pink-400 transition-colors"
               >
                 InfiniteStudioX
+              </Link>{" "}
+              &{" "}
+              <Link
+                href="https://www.shadowrites.in/"
+                target="_blank"
+                className="hover:text-pink-400 transition-colors"
+              >
+                ShadowRites
               </Link>
             </p>
             <a

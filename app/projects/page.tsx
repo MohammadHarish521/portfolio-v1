@@ -12,6 +12,7 @@ export default function ProjectsPage() {
   const freelanceProjects = projectsData.filter(
     (p) => p.category === "freelance"
   );
+  const generalProjects = projectsData.filter((p) => p.category === "general");
 
   return (
     <div className="bg-background text-neutral-300 font-figtree antialiased selection:bg-pink-500/20 selection:text-white relative overflow-x-hidden min-h-screen">
@@ -88,6 +89,30 @@ export default function ProjectsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
               {freelanceProjects.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index + uiuxProjects.length + fullstackProjects.length} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* General Projects Section */}
+        {generalProjects.length > 0 && (
+          <section className="mb-32">
+            <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
+              <span className="w-8 h-[1px] bg-pink-500"></span>
+              General Projects
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
+              {generalProjects.map((project, index) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={
+                    index +
+                    uiuxProjects.length +
+                    fullstackProjects.length +
+                    freelanceProjects.length
+                  }
+                />
               ))}
             </div>
           </section>
