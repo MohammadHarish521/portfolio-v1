@@ -28,7 +28,7 @@ export default function Hero() {
             Mohammad Harish
           </h1>
           <p className="text-sm font-geist text-neutral-500 uppercase tracking-widest">
-            Builder • Agency Owner • Full Stack Developer • Teacher
+            Developer • Ghostwriter
           </p>
         </div>
 
