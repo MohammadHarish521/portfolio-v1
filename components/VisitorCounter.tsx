@@ -2,76 +2,62 @@
 
 import { useEffect, useState } from "react";
 
+const VISIT_TRACKED_KEY = "portfolio-visit-tracked";
+
+let sharedCountRequest: Promise<number> | null = null;
+
+async function loadSharedCount(): Promise<number> {
+  const alreadyCounted = sessionStorage.getItem(VISIT_TRACKED_KEY) === "1";
+  const response = await fetch("/api/visits", {
+    method: alreadyCounted ? "GET" : "POST",
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    throw new Error("Counter unavailable");
+  }
+
+  const data = (await response.json()) as { value?: number };
+  if (typeof data.value !== "number") {
+    throw new Error("Invalid counter response");
+  }
+
+  sessionStorage.setItem(VISIT_TRACKED_KEY, "1");
+  return data.value;
+}
+
 export default function VisitorCounter() {
   const [visitorCount, setVisitorCount] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    const fetchCount = async () => {
-      // Try multiple APIs with fallbacks
-      const apis = [
-        {
-          url: "https://api.countapi.xyz/hit/mdharish-portfolio/visits",
-          parse: (data: { value: number }) => data.value,
-        },
-        {
-          url: "https://api.counterapi.dev/v1/mdharish-portfolio/visits/up",
-          parse: (data: { count: number }) => data.count,
-        },
-      ];
+    let cancelled = false;
 
-      for (const api of apis) {
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 5000);
+    if (!sharedCountRequest) {
+      sharedCountRequest = loadSharedCount().catch((error) => {
+        sharedCountRequest = null;
+        throw error;
+      });
+    }
 
-          const response = await fetch(api.url, {
-            signal: controller.signal,
-            mode: "cors",
-          });
-
-          clearTimeout(timeoutId);
-
-          if (response.ok) {
-            const data = await response.json();
-            const count = api.parse(data);
-            if (typeof count === "number" && count > 0) {
-              setVisitorCount(count);
-              setIsLoading(false);
-              return;
-            }
-          }
-        } catch {
-          // Try next API
-          continue;
+    sharedCountRequest
+      .then((count) => {
+        if (!cancelled) {
+          setVisitorCount(count);
+          setIsLoading(false);
         }
-      }
-
-      // All APIs failed - use localStorage as fallback counter
-      try {
-        const storedCount = localStorage.getItem("visitor-count");
-        const lastVisit = localStorage.getItem("last-visit");
-        const today = new Date().toDateString();
-
-        let count = storedCount ? parseInt(storedCount) : 1000; // Start from 1000
-
-        // Only increment if it's a new session (different day or first visit)
-        if (lastVisit !== today) {
-          count += 1;
-          localStorage.setItem("visitor-count", count.toString());
-          localStorage.setItem("last-visit", today);
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setHasError(true);
+          setIsLoading(false);
         }
+      });
 
-        setVisitorCount(count);
-      } catch {
-        setHasError(true);
-      }
-
-      setIsLoading(false);
+    return () => {
+      cancelled = true;
     };
-
-    fetchCount();
   }, []);
 
   // Helper function to add ordinal suffix (1st, 2nd, 3rd, etc.)

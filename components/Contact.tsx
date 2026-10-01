@@ -2,12 +2,11 @@
 import Link from "next/link";
 import { useState } from "react";
 import {
-  FaCoffee,
-  FaDiscord,
-  FaGithub,
-  FaLinkedin,
-  FaMedium,
-  FaYoutube
+    FaCoffee,
+    FaGithub,
+    FaInstagram,
+    FaLinkedin,
+    FaYoutube
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import VisitorCounter from "./VisitorCounter";
@@ -77,6 +76,12 @@ export default function Contact() {
                   <FaXTwitter  className="w-4 h-4" />
                 </Link>
                 <Link
+                  href="https://www.instagram.com/haarish.rs5/"
+                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-[#E1306C] hover:text-white hover:border-[#E1306C] transition-all duration-300"
+                >
+                  <FaInstagram className="w-4 h-4" />
+                </Link>
+                <Link
                   href="https://topmate.io/mohd_harish10"
                   title="Topmate"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-teal-500 hover:text-white hover:border-teal-500 transition-all duration-300"
@@ -88,18 +93,6 @@ export default function Contact() {
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300"
                 >
                   <FaYoutube className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="https://www.instagram.com/mohammadharish84/"
-                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-white hover:text-black hover:border-white transition-all duration-300"
-                >
-                  <FaMedium className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="https://discord.com/users/harish_51"
-                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-[#5865f2] hover:text-white hover:border-[#5865f2] transition-all duration-300"
-                >
-                  <FaDiscord className="w-4 h-4" />
                 </Link>
               </div>
               
