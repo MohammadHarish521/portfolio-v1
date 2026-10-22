@@ -10,6 +10,24 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
+  {
+    id: 28,
+    Name: "gethigh",
+    Description: "A live product leaderboard where makers bid for visibility and compete for the top spot.",
+    bgimage: "/assets/gethigh.webp",
+    bgDarkImage: "/assets/gethigh.webp",
+    LinkGit: "https://www.gethigh.today/",
+    category: "fullstack",
+  },
+  {
+    id: 27,
+    Name: "Raise My Mac",
+    Description: "A public sponsorship platform where brands claim numbered spots on my next Mac and unlock better upgrades.",
+    bgimage: "/assets/raise-my-mac.webp",
+    bgDarkImage: "/assets/raise-my-mac.webp",
+    LinkGit: "https://www.raisemymini.com/",
+    category: "fullstack",
+  },
    // UI/UX Projects
   {
     id: 26,

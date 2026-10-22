@@ -5,6 +5,8 @@ import ProjectCard from "./ProjectCard";
 
 export default function FeaturedProjects() {
   const featuredProjects = [
+    projectsData.find((p) => p.Name === "gethigh"),
+    projectsData.find((p) => p.Name === "Raise My Mac"),
     projectsData.find((p) => p.Name === "Roastume"),
     projectsData.find((p) => p.Name === "Pixel Brain IQ"),
     projectsData.find((p) => p.Name === "Jose Lead"),
