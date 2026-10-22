@@ -49,7 +49,20 @@ export default function ProjectsPage() {
             </div>
           </div>
         </div>
-
+        {/* Full Stack Section */}
+        {fullstackProjects.length > 0 && (
+          <section className="mb-32">
+            <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
+              <span className="w-8 h-[1px] bg-pink-500"></span>
+              Full-Stack Projects
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
+              {fullstackProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Agency Section */}
         {agencyProjects.length > 0 && (
@@ -60,7 +73,11 @@ export default function ProjectsPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
               {agencyProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={index + fullstackProjects.length}
+                />
               ))}
             </div>
           </section>
@@ -78,26 +95,7 @@ export default function ProjectsPage() {
                 <ProjectCard
                   key={project.id}
                   project={project}
-                  index={index + agencyProjects.length}
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Full Stack Section */}
-        {fullstackProjects.length > 0 && (
-          <section className="mb-32">
-            <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
-              <span className="w-8 h-[1px] bg-pink-500"></span>
-              Full-Stack Projects
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
-              {fullstackProjects.map((project, index) => (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                  index={index + agencyProjects.length + uiuxProjects.length}
+                  index={index + fullstackProjects.length + agencyProjects.length}
                 />
               ))}
             </div>
