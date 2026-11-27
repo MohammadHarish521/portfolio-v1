@@ -111,17 +111,6 @@ export const projectsData: Project[] = [
     Technologies: ["Nextjs", "Tailwind",],
   },
   {
-    id: 4 ,
-    Name: "Salfiya",
-    Description: "Portfolio website for a friend",
-    bgimage: "/assets/salfiya.png",
-    bgDarkImage: "/assets/salfiya.png",
-    LinkGit: "https://salfiya.sh/",
-    category: "uiux",
-    Technologies: ["Reactjs", "Tailwind",],
-  },
-
-  {
     id: 7,
     Name: "Funky Tweets",
     Description: "Twitter-inspired UI",
