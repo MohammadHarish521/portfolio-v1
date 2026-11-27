@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import SocialStats from "@/components/SocialStats";
 import { educationData, experienceData } from "@/data/experience";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -18,13 +19,12 @@ export default function AboutPage() {
         {/* Intro */}
         <section className="mb-24 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-figtree font-normal tracking-tight text-white mb-6 leading-tight">
-            Imagine <br />
-            <span className="text-pink-500">Design</span> and
-            <span className="text-pink-500 ml-2">Code</span>
+            Ghostwriter and founder of <span className="text-pink-500">ShadowRites</span>
           </h1>
           <p className="text-neutral-400 max-w-xl text-lg leading-relaxed">
-            Discover my approach, process, and services in frontend development.
-            Also, check out some of my favourite anime recommendations meheh
+            I help founders write about what they’re building on X. My background
+            in frontend development helps me understand the products and decisions
+            behind the stories they want to share.
           </p>
         </section>
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
                   </span>
                 </div>
                 <p className="text-neutral-400 text-sm font-figtree">
-                  Content Creator & Teacher
+                  Ghostwriter & Content Creator
                 </p>
               </div>
             </div>
@@ -94,7 +94,9 @@ export default function AboutPage() {
             <SocialStats />
             
             <p className="mt-8 text-neutral-400 text-sm border-t border-white/5 pt-6">
-                Proven track record in content creation, audience building, and digital marketing. Now offering consultation and teaching services.
+              <Link href="/#ghostwriting" className="text-pink-400 hover:text-white">
+                See my ghostwriting results
+              </Link>
             </p>
           </div>
         </section>
