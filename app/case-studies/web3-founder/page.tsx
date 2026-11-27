@@ -30,14 +30,14 @@ export default function CaseStudy() {
         <Link href="/#ghostwriting" className="text-sm text-pink-400 hover:underline">← Ghostwriting results</Link>
         <article className="mt-10 space-y-12">
           <header className="max-w-3xl space-y-4">
-            <p className="text-sm text-neutral-400">Ghostwriting case study · Mohammad Harish</p>
+            <p className="text-sm text-neutral-400">Ghostwriting case study · Month one · Mohammad Harish</p>
             <h1 className="text-4xl tracking-tight text-white md:text-6xl">Reviving a Web3 founder’s X account</h1>
-            <p className="text-lg leading-relaxed">A Web3 developer and founder had posted on and off for years. The account’s growth had flattened, even as the founder gained skills and won clients. We spent 30 days turning those experiences into posts other builders could learn from.</p>
+            <p className="text-lg leading-relaxed">One of my current clients is a Web3 developer and founder who had posted on and off for years. The account’s growth had flattened, even as the founder gained skills and won clients. During our first 30 days working together, we turned those experiences into posts other builders could learn from.</p>
           </header>
           <section className="max-w-3xl space-y-4">
             <h2 className="text-2xl text-white">From a quiet account to a conversation</h2>
             <p>We wanted readers to see someone with firsthand experience building and freelancing, then feel comfortable asking that person for advice. I kept the writing conversational and built each post around a decision, a result or a resource.</p>
-            <p>The account’s impressions began to spike after consistent posting resumed. The campaign ran organically, without ads, engagement pods or artificial amplification.</p>
+            <p>I published our first post on October 31. The account’s impressions began to spike as consistent posting resumed. The campaign ran organically, without ads, engagement pods or artificial amplification.</p>
           </section>
           <section>
             <h2 className="mb-5 text-2xl text-white">The five-post sequence</h2>
@@ -63,7 +63,7 @@ export default function CaseStudy() {
             </div>
           </section>
           <section>
-            <h2 className="text-2xl text-white">The 30-day account results</h2>
+            <h2 className="text-2xl text-white">Our first 30 days in numbers</h2>
             <p className="my-4 text-neutral-400">Reported from the client’s account analytics for the full period.</p>
             <dl className="grid grid-cols-2 gap-5 rounded-xl border border-white/10 p-5 md:grid-cols-3">
               {results.map(([label, value]) => <div key={label}><dt className="text-sm text-neutral-400">{label}</dt><dd className="mt-1 text-xl text-white">{value}</dd></div>)}
