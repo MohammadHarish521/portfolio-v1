@@ -10,21 +10,21 @@ export const metadata: Metadata = {
 
 const studies = [
   {
+    title: "Reviving a Web3 founder’s X account",
+    href: "/case-studies/web3-founder",
+    period: "Current client · First 30 days",
+    summary: "A Web3 founder returned to regular posting with a five-post sequence about freelancing and building. In our first 30 days together, the account recorded 504,900 impressions and 3,900 bookmarks.",
+    accent: "text-orange-400",
+    outcome: { label: "Bookmarks", value: "3.9K" },
+    impressions: "504.9K",
+  },
+  {
     title: "Growing a founder’s audience",
     period: "October 15 – November 14, 2026",
     summary: "Over the reporting period, the first founder’s account gained 2,000 new follows. The account’s posts appeared 357,400 times on X.",
-    accent: "text-emerald-300",
+    accent: "text-green-400",
     outcome: { label: "New follows", value: "2K" },
     impressions: "357.4K",
-  },
-  {
-    title: "Reviving a Web3 founder’s X account",
-    href: "/case-studies/web3-founder",
-    period: "First 30 days",
-    summary: "A Web3 founder returned to regular posting with a five-post sequence about freelancing and building. In our first 30 days together, the account recorded 504,900 impressions and 3,900 bookmarks.",
-    accent: "text-amber-300",
-    outcome: { label: "Bookmarks", value: "3.9K" },
-    impressions: "504.9K",
   },
 ];
 
@@ -45,14 +45,14 @@ export default function CaseStudiesPage() {
         {studies.map(({ title, period, summary, accent, outcome, impressions, href }) => (
           <article key={title} className="grid gap-6 border-t border-white/10 py-10 md:grid-cols-[minmax(0,1fr)_16rem] md:gap-12">
             <div>
-              <p className="mb-3 flex items-center gap-3 text-sm text-neutral-400">
+              <p className={`mb-3 flex items-center gap-3 text-sm font-medium ${accent}`}>
                 <span aria-hidden="true" className={`h-0.5 w-6 bg-current ${accent}`} />
                 {period}
               </p>
               <h2 className="text-3xl font-light tracking-tight text-white">{title}</h2>
               <p className="mt-4 max-w-xl leading-relaxed text-neutral-400">{summary}</p>
               {href && (
-                <Link href={href} className="mt-5 inline-block text-sm text-pink-300 underline-offset-4 hover:underline">
+                <Link href={href} className="mt-5 inline-block text-sm text-blue-400 underline-offset-4 hover:underline">
                   Read the full Web3 founder case study
                 </Link>
               )}
@@ -66,7 +66,7 @@ export default function CaseStudiesPage() {
               </div>
               <div className="mt-4 flex items-baseline justify-between gap-4 border-t border-white/10 pt-3">
                 <dt className="text-sm text-neutral-400">Impressions</dt>
-                <dd className="font-medium tabular-nums text-sky-300">{impressions}</dd>
+                <dd className="font-medium tabular-nums text-blue-400">{impressions}</dd>
               </div>
             </dl>
           </article>
