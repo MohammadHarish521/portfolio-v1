@@ -11,7 +11,7 @@ export const experienceData: Experience[] = [
   {
     id: 1,
     role: "Founder",
-    company: "ShadowRitesX",
+    company: "shadoWritesX",
     period: "May 2025 - Present",
     description:
       "Helping founders build their personal brands on X through ghostwriting.",
