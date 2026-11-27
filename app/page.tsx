@@ -55,9 +55,14 @@ export default function Home() {
             Through shadoWritesX, I help founders share what they’re learning and
             building through content written in their voice.
           </p>
-          <Link className="inline-block text-sm text-pink-400 hover:text-white" href="/case-studies">
-            Read the case studies
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+            <Link className="rounded-lg bg-orange-400 px-4 py-2 font-semibold text-neutral-950 hover:bg-orange-300" href="/case-studies/web3-founder">
+              Current client case study
+            </Link>
+            <Link className="text-blue-400 underline-offset-4 hover:underline" href="/case-studies">
+              All case studies
+            </Link>
+          </div>
         </section>
         <RecentPosts />
         <Contact />

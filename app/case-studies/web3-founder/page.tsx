@@ -15,11 +15,11 @@ const posts = [
   { title: "Teach a practical lesson", story: "We closed the sequence with an educational thread. It had the smallest audience of the five, yet readers bookmarked it 229 times.", metrics: ["7.3K", "101", "5", "7", "6.1%", "Unreported", "42", "229"] },
 ];
 const metricColors: Record<string, string> = {
-  Views: "text-sky-300",
-  Impressions: "text-sky-300",
-  "New follows": "text-emerald-300",
-  Bookmarks: "text-amber-300",
-  "Engagement rate": "text-violet-300",
+  Views: "text-blue-400",
+  Impressions: "text-blue-400",
+  "New follows": "text-green-400",
+  Bookmarks: "text-orange-400",
+  "Engagement rate": "text-green-400",
 };
 
 const columns = ["Views", "Likes", "Replies", "Reposts", "Engagement rate", "Profile visits", "New follows", "Bookmarks"];
@@ -35,10 +35,10 @@ export default function CaseStudy() {
     <div className="min-h-screen bg-background font-figtree text-neutral-300">
       <Navbar />
       <main className="mx-auto max-w-5xl px-6 py-12">
-        <Link href="/case-studies" className="text-sm text-pink-400 hover:underline">← All case studies</Link>
+        <Link href="/case-studies" className="text-sm text-blue-400 hover:underline">← All case studies</Link>
         <article className="mt-10 space-y-12">
           <header className="max-w-3xl space-y-4">
-            <p className="text-sm text-neutral-400">Ghostwriting case study · Month one · Mohammad Harish</p>
+            <p className="text-sm font-medium text-orange-400">Current client · First 30 days · Mohammad Harish</p>
             <h1 className="text-4xl tracking-tight text-white md:text-6xl">Reviving a Web3 founder’s X account</h1>
             <p className="text-lg leading-relaxed">One of my current clients is a Web3 developer and founder who had posted on and off for years. The account’s growth had flattened, even as the founder gained skills and won clients. During our first 30 days working together, we turned those experiences into posts other builders could learn from.</p>
           </header>
@@ -49,7 +49,7 @@ export default function CaseStudy() {
           </section>
           <section>
             <h2 className="mb-5 text-2xl text-white">The five-post sequence</h2>
-            <ol className="list-decimal space-y-5 pl-6 marker:text-pink-400">
+            <ol className="list-decimal space-y-5 pl-6 marker:text-orange-400">
               {posts.map(({ title, story }) => (
                 <li key={title} className="max-w-3xl pl-2">
                   <h3 className="font-medium text-white">{title}</h3>
