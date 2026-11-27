@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -15,9 +16,10 @@ const studies = [
     metrics: [["Impressions", "357.4K"], ["New follows", "2K"]],
   },
   {
-    title: "Writing posts readers saved",
-    period: "October 2026",
-    summary: "A second founder tracked how often readers saved posts for later. Across October, the account recorded 3,900 bookmarks alongside 504,900 impressions.",
+    title: "Reviving a Web3 founder’s X account",
+    href: "/case-studies/web3-founder",
+    period: "First 30 days",
+    summary: "A Web3 founder returned to regular posting with a five-post sequence about freelancing and building. In our first 30 days together, the account recorded 504,900 impressions and 3,900 bookmarks.",
     metrics: [["Impressions", "504.9K"], ["Bookmarks", "3.9K"]],
   },
 ];
@@ -36,7 +38,7 @@ export default function CaseStudiesPage() {
             their own voice. Two clients shared these results from their X accounts.
           </p>
         </header>
-        {studies.map(({ title, period, summary, metrics }) => (
+        {studies.map(({ title, period, summary, metrics, href }) => (
           <article key={title} className="border-t border-white/10 py-10">
             <p className="mb-3 text-sm text-pink-400">{period}</p>
             <h2 className="text-3xl font-light tracking-tight text-white">{title}</h2>
@@ -49,6 +51,11 @@ export default function CaseStudiesPage() {
                 </div>
               ))}
             </dl>
+            {href && (
+              <Link href={href} className="mt-5 inline-block text-sm text-pink-400 hover:underline">
+                Read the full Web3 founder case study
+              </Link>
+            )}
           </article>
         ))}
         <Footer />
