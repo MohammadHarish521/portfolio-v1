@@ -51,7 +51,7 @@ export default function Home() {
             Ghostwriting results on X
           </h2>
           <p className="mb-8 max-w-xl text-neutral-400">
-            Through ShadowRites, I help founders share what they’re learning and
+            Through ShadowRitesX, I help founders share what they’re learning and
             building through content written in their voice.
           </p>
           <dl className="grid gap-4 sm:grid-cols-3">
@@ -70,7 +70,7 @@ export default function Home() {
           </dl>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm">
             <a className="text-pink-400 hover:text-white" href="https://www.shadowrites.in/">
-              Explore ShadowRites
+              Explore ShadowRitesX
             </a>
             <a className="text-neutral-400 hover:text-white" href="https://www.linkedin.com/posts/mdharish84_if-youre-a-founder-looking-for-a-ghostwriter-activity-7470479483104292864-icf9">
               Read the results on LinkedIn
