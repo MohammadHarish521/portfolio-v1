@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -17,9 +18,10 @@ const studies = [
     impressions: "357.4K",
   },
   {
-    title: "Writing posts readers saved",
-    period: "October 2026",
-    summary: "A second founder tracked how often readers saved posts for later. Across October, the account recorded 3,900 bookmarks alongside 504,900 impressions.",
+    title: "Reviving a Web3 founder’s X account",
+    href: "/case-studies/web3-founder",
+    period: "First 30 days",
+    summary: "A Web3 founder returned to regular posting with a five-post sequence about freelancing and building. In our first 30 days together, the account recorded 504,900 impressions and 3,900 bookmarks.",
     accent: "text-amber-300",
     outcome: { label: "Bookmarks", value: "3.9K" },
     impressions: "504.9K",
@@ -40,7 +42,7 @@ export default function CaseStudiesPage() {
             their own voice. Two clients shared these results from their X accounts.
           </p>
         </header>
-        {studies.map(({ title, period, summary, accent, outcome, impressions }) => (
+        {studies.map(({ title, period, summary, accent, outcome, impressions, href }) => (
           <article key={title} className="grid gap-6 border-t border-white/10 py-10 md:grid-cols-[minmax(0,1fr)_16rem] md:gap-12">
             <div>
               <p className="mb-3 flex items-center gap-3 text-sm text-neutral-400">
@@ -49,6 +51,11 @@ export default function CaseStudiesPage() {
               </p>
               <h2 className="text-3xl font-light tracking-tight text-white">{title}</h2>
               <p className="mt-4 max-w-xl leading-relaxed text-neutral-400">{summary}</p>
+              {href && (
+                <Link href={href} className="mt-5 inline-block text-sm text-pink-300 underline-offset-4 hover:underline">
+                  Read the full Web3 founder case study
+                </Link>
+              )}
             </div>
             <dl className="rounded-xl border border-white/10 bg-neutral-900 px-5 py-4">
               <div>
@@ -59,7 +66,7 @@ export default function CaseStudiesPage() {
               </div>
               <div className="mt-4 flex items-baseline justify-between gap-4 border-t border-white/10 pt-3">
                 <dt className="text-sm text-neutral-400">Impressions</dt>
-                <dd className="font-medium tabular-nums text-neutral-200">{impressions}</dd>
+                <dd className="font-medium tabular-nums text-sky-300">{impressions}</dd>
               </div>
             </dl>
           </article>
