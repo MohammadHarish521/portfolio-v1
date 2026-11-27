@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Contact from "@/components/Contact";
 import ContributionGraph from "@/components/ContributionGraph";
 import FeaturedProjects from "@/components/FeaturedProjects";
@@ -56,13 +57,14 @@ export default function Home() {
           </p>
           <dl className="grid gap-4 sm:grid-cols-2">
             {[
-              { period: "Oct 15 – Nov 14, 2026", impressions: "357.4K", outcome: "2K new follows" },
-              { period: "October 2026", impressions: "504.9K", outcome: "3.9K bookmarks" },
-            ].map(({ period, impressions, outcome }, index) => (
+              { label: "Founder account", period: "Oct 15 – Nov 14, 2026", impressions: "357.4K", outcome: "2K new follows" },
+              { label: "Web3 founder", period: "30 days", study: "/case-studies/web3-founder", impressions: "504.9K", outcome: "3.9K bookmarks" },
+            ].map(({ label, period, impressions, outcome, study }) => (
               <div key={period} className="rounded-xl border border-white/10 bg-white/5 p-5">
-                <dt className="text-sm text-neutral-400">Client {index + 1} · {period}</dt>
+                <dt className="text-sm text-neutral-400">{label} · {period}</dt>
                 <dd className="mt-2 text-2xl tracking-tight text-white">{impressions} impressions</dd>
                 <dd className="mt-1 text-neutral-300">{outcome}</dd>
+                {study && <dd className="mt-4"><Link href={study} className="text-sm text-pink-400 hover:underline">Read the case study →</Link></dd>}
               </div>
             ))}
           </dl>
