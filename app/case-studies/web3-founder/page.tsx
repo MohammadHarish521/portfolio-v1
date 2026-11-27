@@ -14,6 +14,14 @@ const posts = [
   { title: "Share the working toolkit", story: "We followed the conversation with a curated set of resources. Readers could save something useful from the founder’s experience and return to it during their own work.", metrics: ["132K", "1.7K", "1K", "39", "4.2%", "1.4K", "136", "724"] },
   { title: "Teach a practical lesson", story: "We closed the sequence with an educational thread. It had the smallest audience of the five, yet readers bookmarked it 229 times.", metrics: ["7.3K", "101", "5", "7", "6.1%", "Unreported", "42", "229"] },
 ];
+const metricColors: Record<string, string> = {
+  Views: "text-sky-300",
+  Impressions: "text-sky-300",
+  "New follows": "text-emerald-300",
+  Bookmarks: "text-amber-300",
+  "Engagement rate": "text-violet-300",
+};
+
 const columns = ["Views", "Likes", "Replies", "Reposts", "Engagement rate", "Profile visits", "New follows", "Bookmarks"];
 const results = [
   ["Impressions", "504.9K"], ["Engagement rate", "5.8%"], ["Engagements", "29.4K"],
@@ -56,7 +64,7 @@ export default function CaseStudy() {
                 <tbody>{posts.map(({ title, metrics }) => (
                   <tr key={title} className="border-t border-white/10">
                     <th scope="row" className="p-2 font-normal text-white">{title}</th>
-                    {metrics.map((value, i) => <td key={columns[i]} className="p-2">{value}</td>)}
+                    {metrics.map((value, i) => <td key={columns[i]} className={`p-2 tabular-nums ${metricColors[columns[i]] ?? ""}`}>{value}</td>)}
                   </tr>
                 ))}</tbody>
               </table>
@@ -66,7 +74,7 @@ export default function CaseStudy() {
             <h2 className="text-2xl text-white">Our first 30 days in numbers</h2>
             <p className="my-4 text-neutral-400">Reported from the client’s account analytics for the full period.</p>
             <dl className="grid grid-cols-2 gap-5 rounded-xl border border-white/10 p-5 md:grid-cols-3">
-              {results.map(([label, value]) => <div key={label}><dt className="text-sm text-neutral-400">{label}</dt><dd className="mt-1 text-xl text-white">{value}</dd></div>)}
+              {results.map(([label, value]) => <div key={label}><dt className="text-sm text-neutral-400">{label}</dt><dd className={`mt-1 text-xl tabular-nums ${metricColors[label] ?? "text-white"}`}>{value}</dd></div>)}
             </dl>
           </section>
           <section className="max-w-3xl space-y-3">
