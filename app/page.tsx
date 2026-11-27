@@ -51,31 +51,24 @@ export default function Home() {
             Ghostwriting results on X
           </h2>
           <p className="mb-8 max-w-xl text-neutral-400">
-            Through ShadowRites, I help founders share what they’re learning and
+            Through shadoWritesX, I help founders share what they’re learning and
             building through content written in their voice.
           </p>
-          <dl className="grid gap-4 sm:grid-cols-3">
+          <dl className="grid gap-4 sm:grid-cols-2">
             {[
-              { label: "Client account in 20 days", result: "400 → 2,100" },
-              { label: "Client account in 30 days", result: "0 → 356" },
-              { label: "My personal account in 295 days", result: "0 → 12,000" },
-            ].map(({ label, result }) => (
-              <div key={label} className="rounded-xl border border-white/10 bg-white/5 p-5">
-                <dt className="text-sm text-neutral-400">{label}</dt>
-                <dd className="mt-2 text-2xl tracking-tight text-white">
-                  {result} <span className="text-sm text-neutral-400">followers</span>
-                </dd>
+              { period: "Oct 15 – Nov 14, 2026", impressions: "357.4K", outcome: "2K new follows" },
+              { period: "October 2026", impressions: "504.9K", outcome: "3.9K bookmarks" },
+            ].map(({ period, impressions, outcome }, index) => (
+              <div key={period} className="rounded-xl border border-white/10 bg-white/5 p-5">
+                <dt className="text-sm text-neutral-400">Client {index + 1} · {period}</dt>
+                <dd className="mt-2 text-2xl tracking-tight text-white">{impressions} impressions</dd>
+                <dd className="mt-1 text-neutral-300">{outcome}</dd>
               </div>
             ))}
           </dl>
-          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm">
-            <a className="text-pink-400 hover:text-white" href="https://www.shadowrites.in/">
-              Explore ShadowRites
-            </a>
-            <a className="text-neutral-400 hover:text-white" href="https://www.linkedin.com/posts/mdharish84_if-youre-a-founder-looking-for-a-ghostwriter-activity-7470479483104292864-icf9">
-              Read the results on LinkedIn
-            </a>
-          </div>
+          <a className="mt-6 inline-block text-sm text-pink-400 hover:text-white" href="https://www.shadowrites.in/">
+            See the client-reported results on shadoWritesX
+          </a>
         </section>
         <RecentPosts />
         <Contact />

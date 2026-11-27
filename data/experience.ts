@@ -11,10 +11,10 @@ export const experienceData: Experience[] = [
   {
     id: 1,
     role: "Founder",
-    company: "InfiniteStudioX · Freelance",
+    company: "shadoWritesX",
     period: "May 2025 - Present",
     description:
-      "Providing services in Web Development, Web3, DeFi, and App Development — specializing in building MVPs with great design and functionality to ensure client satisfaction.",
+      "Helping founders build their personal brands on X through ghostwriting.",
     type: "experience",
   },
   {

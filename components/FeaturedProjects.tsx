@@ -10,7 +10,6 @@ export default function FeaturedProjects() {
     projectsData.find((p) => p.Name === "Roastume"),
     projectsData.find((p) => p.Name === "Pixel Brain IQ"),
     projectsData.find((p) => p.Name === "Jose Lead"),
-    projectsData.find((p) => p.Name === "Salfiya"),
   ].filter((p) => p !== undefined) as typeof projectsData;
 
   return (

@@ -31,21 +31,11 @@ export const projectsData: Project[] = [
    // UI/UX Projects
   {
     id: 26,
-    Name: "ShadowRites",
+    Name: "shadoWritesX",
     Description: "Ghostwriting and personal branding agency",
     bgimage: "/assets/ghost.png",
     bgDarkImage: "/assets/ghost.png",
     LinkGit: "https://www.shadowrites.in/",
-    category: "agency",
-    Technologies: ["Nextjs", "Tailwind"],
-  },
-  {
-    id: 25,
-    Name: "InfiniteStudioX",
-    Description: "Premium design and development agency",
-    bgimage: "/assets/agency.png",
-    bgDarkImage: "/assets/agency.png",
-    LinkGit: "https://www.infinitestudiox.art/",
     category: "agency",
     Technologies: ["Nextjs", "Tailwind"],
   },
@@ -120,17 +110,6 @@ export const projectsData: Project[] = [
     category: "uiux",
     Technologies: ["Nextjs", "Tailwind",],
   },
-  {
-    id: 4 ,
-    Name: "Salfiya",
-    Description: "Portfolio website for a friend",
-    bgimage: "/assets/salfiya.png",
-    bgDarkImage: "/assets/salfiya.png",
-    LinkGit: "https://salfiya.sh/",
-    category: "uiux",
-    Technologies: ["Reactjs", "Tailwind",],
-  },
-
   {
     id: 7,
     Name: "Funky Tweets",
