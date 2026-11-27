@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
    // UI/UX Projects
   {
     id: 26,
-    Name: "ShadowRitesX",
+    Name: "shadoWritesX",
     Description: "Ghostwriting and personal branding agency",
     bgimage: "/assets/ghost.png",
     bgDarkImage: "/assets/ghost.png",
