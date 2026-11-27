@@ -20,7 +20,7 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
   title: "Mohammad Harish | Ghostwriter for Founders",
-  description: "I help founders turn what they know and what they’re building into posts for X through ShadowRites.",
+  description: "I help founders turn what they know and what they’re building into posts for X through ShadowRitesX.",
 };
 
 export default function RootLayout({
