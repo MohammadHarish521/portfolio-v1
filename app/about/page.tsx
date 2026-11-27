@@ -94,7 +94,7 @@ export default function AboutPage() {
             <SocialStats />
             
             <p className="mt-8 text-neutral-400 text-sm border-t border-white/5 pt-6">
-              <Link href="/#ghostwriting" className="text-pink-400 hover:text-white">
+              <Link href="/case-studies" className="text-pink-400 hover:text-white">
                 See my ghostwriting results
               </Link>
             </p>

@@ -66,7 +66,7 @@ export default function Hero() {
               <span className="absolute bottom-[-2px] left-0 w-0 h-[0.5px] bg-pink-400/60 group-hover:w-full transition-all duration-300 ease-out"></span>
             </Link>
 
-            <Link href="/#ghostwriting" className="text-sm text-neutral-300 hover:text-white transition-colors">
+            <Link href="/case-studies" className="text-sm text-neutral-300 hover:text-white transition-colors">
               See client results
             </Link>
           </p>

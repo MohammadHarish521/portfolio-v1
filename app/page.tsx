@@ -55,22 +55,9 @@ export default function Home() {
             Through shadoWritesX, I help founders share what they’re learning and
             building through content written in their voice.
           </p>
-          <dl className="grid gap-4 sm:grid-cols-2">
-            {[
-              { label: "Founder account", period: "Oct 15 – Nov 14, 2026", impressions: "357.4K", outcome: "2K new follows" },
-              { label: "Web3 founder", period: "First month", study: "/case-studies/web3-founder", impressions: "504.9K", outcome: "3.9K bookmarks" },
-            ].map(({ label, period, impressions, outcome, study }) => (
-              <div key={period} className="rounded-xl border border-white/10 bg-white/5 p-5">
-                <dt className="text-sm text-neutral-400">{label} · {period}</dt>
-                <dd className="mt-2 text-2xl tracking-tight text-white">{impressions} impressions</dd>
-                <dd className="mt-1 text-neutral-300">{outcome}</dd>
-                {study && <dd className="mt-4"><Link href={study} className="text-sm text-pink-400 hover:underline">Read the case study →</Link></dd>}
-              </div>
-            ))}
-          </dl>
-          <a className="mt-6 inline-block text-sm text-pink-400 hover:text-white" href="https://www.shadowrites.in/">
-            See the client-reported results on shadoWritesX
-          </a>
+          <Link className="inline-block text-sm text-pink-400 hover:text-white" href="/case-studies">
+            Read the case studies
+          </Link>
         </section>
         <RecentPosts />
         <Contact />

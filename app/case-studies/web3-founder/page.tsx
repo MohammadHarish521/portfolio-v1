@@ -27,7 +27,7 @@ export default function CaseStudy() {
     <div className="min-h-screen bg-background font-figtree text-neutral-300">
       <Navbar />
       <main className="mx-auto max-w-5xl px-6 py-12">
-        <Link href="/#ghostwriting" className="text-sm text-pink-400 hover:underline">← Ghostwriting results</Link>
+        <Link href="/case-studies" className="text-sm text-pink-400 hover:underline">← All case studies</Link>
         <article className="mt-10 space-y-12">
           <header className="max-w-3xl space-y-4">
             <p className="text-sm text-neutral-400">Ghostwriting case study · Month one · Mohammad Harish</p>
