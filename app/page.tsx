@@ -44,9 +44,9 @@ export default function Home() {
 
       <Navbar />
 
-      <main className="w-full max-w-6xl mx-auto px-6 pb-12 relative">
+      <main className="w-full max-w-6xl mx-auto px-6 pb-12 relative lg:[&>section]:pl-0 lg:[&>footer]:pl-0">
         <Hero />
-        <section id="ghostwriting" className="mt-24 scroll-mt-24 lg:pl-12">
+        <section id="ghostwriting" className="mt-24 scroll-mt-24">
           <h2 className="mb-4 text-3xl font-light tracking-tight text-white">
             Ghostwriting results on X
           </h2>
