@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import CodingStatusDot from "./CodingStatus";
-import StudentBadge from "./StudentBadge";
 
 export default function Hero() {
   return (
     <section className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 mt-10">
       {/* Left Content */}
       <div className="flex flex-col gap-8 lg:flex-1">
-        {/* Small Profile Image with Status Dot */}
+        {/* Small Profile Image */}
         <div className="relative w-20 h-20 lg:w-28 lg:h-28 aspect-square rounded-full overflow-visible">
           <div className="w-full h-full aspect-square rounded-full overflow-hidden border-2 border-neutral-800">
             <Image
@@ -18,8 +16,6 @@ export default function Hero() {
               className="object-cover rounded-full"
             />
           </div>
-          {/* Status Dot Overlay */}
-          <CodingStatusDot />
         </div>
 
         {/* Name and Title */}
@@ -28,31 +24,21 @@ export default function Hero() {
             Mohammad Harish
           </h1>
           <p className="text-sm font-geist text-neutral-500 uppercase tracking-widest">
-            Developer • Ghostwriter
+            Ghostwriter for founders
           </p>
         </div>
 
         {/* Description Content */}
         <div className="max-w-3xl flex flex-col gap-6 text-lg font-light text-neutral-300 leading-relaxed">
           <p>
-            I build{" "}
-            <span className="text-pink-400">innovative digital solutions</span>{" "}
-            and teach others to amplify their{" "}
-            <span className="text-pink-400">digital presence</span> through{" "}
-            <span className="text-pink-400">code, design, and content</span>.
+            I help founders turn what they know and what they’re building into{" "}
+            <span className="text-pink-400">posts for X</span> that sound like
+            them.
           </p>
 
           <div className="flex flex-col gap-1 text-base">
             <p>
-              <span className="text-pink-400 font-medium">Founder</span> @{" "}
-              <Link
-                href="https://www.infinitestudiox.art/"
-                target="_blank"
-                className="hover:text-pink-400 transition-colors"
-              >
-                InfiniteStudioX
-              </Link>{" "}
-              &{" "}
+              <span className="text-pink-400 font-medium">Founder of</span>{" "}
               <Link
                 href="https://www.shadowrites.in/"
                 target="_blank"
@@ -75,17 +61,14 @@ export default function Hero() {
               target="_blank"
               className="group relative inline-block text-pink-400 hover:text-white transition-colors"
             >
-              <span className="relative z-10">Book a Call</span>
+              <span className="relative z-10">Book a ghostwriting call</span>
               {/* Micro animation underline effect */}
               <span className="absolute bottom-[-2px] left-0 w-0 h-[0.5px] bg-pink-400/60 group-hover:w-full transition-all duration-300 ease-out"></span>
-              {/* Hover tooltip */}
-              <span className="absolute bottom-full left-0 mb-2 px-2 py-1 text-xs text-neutral-400 bg-neutral-900 border border-neutral-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-                for clients
-              </span>
             </Link>
 
-            {/* Student Badge */}
-            <StudentBadge />
+            <Link href="/#ghostwriting" className="text-sm text-neutral-300 hover:text-white transition-colors">
+              See client results
+            </Link>
           </p>
         </div>
       </div>
