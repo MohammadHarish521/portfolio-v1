@@ -19,7 +19,7 @@ export default function AboutPage() {
         {/* Intro */}
         <section className="mb-24 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-figtree font-normal tracking-tight text-white mb-6 leading-tight">
-            Ghostwriter and founder of <span className="text-pink-500">ShadowRites</span>
+            Ghostwriter and founder of <span className="text-pink-500">ShadowRitesX</span>
           </h1>
           <p className="text-neutral-400 max-w-xl text-lg leading-relaxed">
             I help founders write about what they’re building on X. My background
