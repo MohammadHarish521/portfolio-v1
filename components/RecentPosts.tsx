@@ -7,7 +7,7 @@ export default function RecentPosts() {
   return (
     <section id="blog" className="mt-32 lg:pl-12 relative">
       <h2 className="text-3xl font-figtree font-light tracking-tight text-white mb-12">
-        Most recent posts
+        Writing samples
       </h2>
 
       <div className="flex flex-col gap-10">
