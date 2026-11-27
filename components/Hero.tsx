@@ -44,7 +44,7 @@ export default function Hero() {
                 target="_blank"
                 className="hover:text-pink-400 transition-colors"
               >
-                ShadowRitesX
+                shadoWritesX
               </Link>
             </p>
             <a
