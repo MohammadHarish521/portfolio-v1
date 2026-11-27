@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mt-32 lg:pl-12 mb-10 relative">
       <h2 className="text-3xl font-figtree font-light tracking-tight text-white mb-10">
-        Get in Touch
+        Work with me
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -44,8 +44,8 @@ export default function Contact() {
         <div className="flex flex-col justify-between">
           <div className="space-y-6">
             <p className="text-base text-neutral-400 font-light leading-relaxed">
-              If you have any inquiries, please feel free to reach out. You can
-              contact me via email at <br />
+              Looking for a ghostwriter? Tell me what you’re building and what
+              you’d like to share on X. <br />
               <a
                 href="mailto:xharish52@gmail.com"
                 className="text-pink-400 hover:text-white transition-colors"
